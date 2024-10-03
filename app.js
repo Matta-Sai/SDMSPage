@@ -16,9 +16,9 @@ function onClickSubmit() {
     let month = today.getMonth() + 1
     let date = today.getDate()
     month = month.toString()
-    month = "0" + month
+    month.length === 1 ? month = "0" + month : month = month
     year = year.substring(2)
-
+    
     window.open(`${urlStart}${useridInput.value}${urlCenter}${minutes}${hours}${year}${month}${date}${urlEnd}`)
 }
 submitButton.addEventListener("click", onClickSubmit)
